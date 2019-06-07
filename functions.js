@@ -15,5 +15,14 @@ $(window).on('loaded',function(){
 
 
 function RenderPics(r){
-   console.log(r);
+	if(r&&r.status&&r.status==200&&r.data){
+		for(id in r.data){
+			var item=r.data[id];
+			$('body').append('<img src="'+item.url+'" title="'+ item.name +'" />');
+		}
+	}
+	else{
+		alert('We cannot fetch the images right now.');
+		Di.err(r);
+	}
 }
