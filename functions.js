@@ -2,4 +2,4 @@
 
 
 
-alert('Hello World!');
+console.log('functions loaded!');
