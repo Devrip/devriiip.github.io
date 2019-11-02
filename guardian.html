@@ -1,73 +1,136 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>guardiansurvivalgear</title>
-    <style>
-      body {
-        text-align: center;
-        background: url("https://www.wholesalesurvivalkits.com/skin/frontend/default/default/images/logo1.png");
-        background-size: 50%;
-        background-position: left;
-        color: gray;
-        font-family: georgia;
-        background-repeat: no-repeat;
-        margin: 0 auto;
-        padding: 0 auto;
-        size: 50%;
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<title>Devin's Eatery</title>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+  
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background-size: 100% 100%;
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
 
-      }
-      .poo {
-        font-size: 52px;
-        color: red;
-      }
-      input {
-        border: 0;
-        padding: 10px;
-        font-size: 18px;
-      }
-      input[type="submit"] {
-        background: blue;
-        color: white;
-      }
+small {
+  opacity: 0;
+  background-size: cover;
+  
+  
+}
 
-      img {
-        border-radius: 50%;
-        width: 220px;
-        height: 220px;
-        border-style: ridge;
-        border-color: blue;
-        border-width: 3px;
-        box-shadow: 1px 1px 20px black;
-        }
+.show-description p {
+  height: 150px;
+}
 
-      footer {
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        }
+.show-description small {
+  opacity: 1;
+}
 
-        #poop {
+.first{
+  background-image: url("https://i.imgur.com/o6QsbNU.jpg");
+  background-size: 100% 100%;
+  
+}
+.second{
+  background-image: url("https://i.imgur.com/f8FkMsS.jpg");
+  background-size: 100% 100%;
+}
+.dessert{
+  background-image: url("https://i.imgur.com/sLUA6iH.jpg");
+  background-size: 100% 100%;
+}
+.price {
+  float: right;
+}
 
-          border: 5px solid red;
-        }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
 
 
+</style>
 
+</head>
 
-    </style>
-  </head>
-  <body>
-    <main>
-      <img src="https://i.imgur.com/0dpCwFg.png" alt="random image" title="random image">
+<body>
+<h1>Bachelor Restaurant</h1>
+<h2>a place for disappointment</h2>
+<div class="first">
+  <p>Mayo and Egg <span class="price">$19</span><br />
+  <small>You will definitely not be fulfilled. Just an egg with a mayo sauce in a bowl. Garnished with nothing. </small></p>
+</div>
 
-      <p class="poo"><strong>Buy a website ass hat!</strong></p>
-<div>
-      <input type="email" placeholder="Your email" id="poop">
-      <input type="submit" placeholder="Click to get a website">
-    </div>
-    </main>
-  <footer>
-     <p><small> &copy Devin, inc. 2019</small></p>
-  </footer>
+<div class="second">
+  <p>Hot-Style Cheese <span class="price">$15</span><br />
+  <small>Mostly empty bag of pizza cheese that can be dipped in cheap hot-sauce for a miserable experience. Garnished with nothing.</small></p>
+</div>
+  
+<div class="dessert">
+  <p>Rolaids <span class="price">$39</span><br />
+  <small>Terrible dessert but it helps relieve the pain from our main entrees. You can eat with a spoon. Garnished with an accidental sneeze.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
 </body>
-</html>
